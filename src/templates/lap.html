@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Heat Map Visualizer
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <!-- Form section -->
+                <br>
+                <h1 class="f1-font red center-text">Lap 1</h1>
+                <div class="mb-3">
+                    <br>
+                    <form id="lapForm" action="/lap" method="post">
+                        <div class="mb-3 text-left">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="year1" name="year1" placeholder="Year" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="event1" name="event1" placeholder="Event" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="session1" name="session1" placeholder="Session" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="driver1" name="driver1" placeholder="Driver (e.g. NOR)" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="lap1" name="lap1" placeholder="Lap # (F for fastest)" type="text">
+                        </div>
+                        <h1 class="f1-font red center-text">Lap 2</h1>
+                        <br>
+                        <div class="mb-3 text-left">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="year2" name="year2" placeholder="Year" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="event2" name="event2" placeholder="Event" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="session2" name="session2" placeholder="Session" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="driver2" name="driver2" placeholder="Driver (e.g. NOR)" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="lap2" name="lap2" placeholder="Lap # (F for fastest)" type="text">
+                        </div>
+                        <button class="btn btn-primary mx-auto center-image" type="submit">Generate</button>
+                    </form>
+                </div>
+            </div>
+            
+            
+            <div class="col-md-8">
+                <!-- Output image section -->
+                <br>
+                {% if image %}
+                    <div class="center-image">
+                        <img class="center-image" src="static/img/lap.png" alt="Lap Telemetry Image">
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

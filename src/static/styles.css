@@ -1,0 +1,78 @@
+.red {
+    /* F1's red color */
+    color: #FF1801; 
+}
+
+.f1-font {
+    /* not actually Spotify's font, but one very similar */
+    font-family: "Titillium Web";
+    font-weight: bold;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+li:before {
+    /* creates the musical notes instead of bullet points in the list */
+    content: '\1F3B6';
+    margin-left:20px;
+    margin-right:3px;
+}
+
+.styled-table {
+    /* pretty looking table */
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 40px #1DB954;
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #03e80e;
+}
+
+/* alternating colors of rows */
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #515151;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #73be64;
+}
+
+.nav-link {
+    color: #FF1801;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+meter {
+    /* set the size of the meter at the bottom of the stats page */
+    width: 200px;
+}
+

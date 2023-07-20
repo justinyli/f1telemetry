@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Heat Map Visualizer
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Form section -->
+                <br>
+                <h1 class="f1-font red center-text">Heat Map Generator</h1>
+                <div class="mb-3">
+                    <br>
+                    <form action="/heatmap" method="post">
+                        <div class="mb-3 text-left">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="year" name="year" placeholder="Year" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="event" name="event" placeholder="Event" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="session" name="session" placeholder="Session" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="driver" name="driver" placeholder="Driver (e.g. NOR)" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control w-auto mx-auto" id="lap" name="lap" placeholder="Lap # (F for fastest)" type="text">
+                        </div>
+                        <button class="btn btn-primary mx-auto center-image" type="submit">Generate</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!-- Output image section -->
+                <br>
+                {% if image %}
+                    <div class="center-image">
+                        <img class="center-image" src="static/img/heatmap.png" alt="Heat Map Image">
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
