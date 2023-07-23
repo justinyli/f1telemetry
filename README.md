@@ -101,7 +101,7 @@ Ultimately, Formula 1 continues to captivate audiences worldwide with its blend 
 
 # How to Use
 
-To experience **Rhythm of the Race**, follow these simple steps:
+To use **Rhythm of the Race**, follow these simple steps:
 
 1. Install the necessary dependencies from [here](src/requirements.txt).
 2. Launch the application using Flask and select the desired race, session, and drivers for comparison.
